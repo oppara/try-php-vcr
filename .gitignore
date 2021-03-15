@@ -1,0 +1,4 @@
+vendor
+.phpunit*
+tests/fixtures/*
+!tests/fixtures/.gitkeep
