@@ -45,6 +45,21 @@ class VCRTest extends TestCase
         $this->assertSameBody((string)$response->getBody());
     }
 
+    /**
+     * @test
+     * @vcr goutte
+     */
+    public function goutteRequest(): void
+    {
+        $client = new \Goutte\Client();
+        $crawler = $client->request('GET', static::URL);
+        // gbqfbb
+
+        // $text = $crawler->filter('#gbqfbb')->text();
+            // var_dump($text);
+        // $this->assertSameBody((string)$response->getBody());
+    }
+
     protected function getCasseteName(): string
     {
         $class = \get_class($this);
