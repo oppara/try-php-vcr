@@ -8,5 +8,8 @@
     "phpunit/phpunit": "^9.5",
     "php-vcr/php-vcr": "^1.5",
     "php-vcr/phpunit-testlistener-vcr": "^3.2"
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^7.2"
   }
 }

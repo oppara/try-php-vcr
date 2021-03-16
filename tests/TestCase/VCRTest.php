@@ -33,6 +33,18 @@ class VCRTest extends TestCase
         $this->assertSameBody($expected);
     }
 
+    /**
+     * @test
+     * @vcr guzzle
+     */
+    public function guzzleRequest(): void
+    {
+        $client = new \GuzzleHttp\Client();
+        $response = $client->request('GET', static::URL);
+
+        $this->assertSameBody((string)$response->getBody());
+    }
+
     protected function getCasseteName(): string
     {
         $class = \get_class($this);
